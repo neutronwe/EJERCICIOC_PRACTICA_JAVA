@@ -1,5 +1,4 @@
-
-package com.mycompany.ejerciciospractica;
+package ejerciciospractica;
 
 import java.util.Scanner;
 
@@ -7,6 +6,7 @@ import java.util.Scanner;
 public class ejercicio9 {
     
     static Scanner teclado = new Scanner (System.in);
+    static int opcionaux = 0;
 
     public static void main(String[] args) {
         
@@ -78,11 +78,36 @@ public class ejercicio9 {
         
         System.out.println("Indique el valor para B");
         B = teclado.nextInt();
+        while (B == A){
+            
+            System.out.println("¡Los valores no pueden ser iguales!");
+            System.out.println("Indique otra vez el valor de B");
+            B = teclado.nextInt();
+        }
         
         System.out.println("Indique el valor para C");
         C = teclado.nextInt ();
+        while (C == A){
+            
+            System.out.println("¡Los valores no pueden ser iguales!");
+            System.out.println("Indique otra vez el valor de C");
+            C = teclado.nextInt();
+            while ( C == B){
+            System.out.println("¡Los valores no pueden ser iguales!");
+            System.out.println("Indique otra vez el valor de C");
+            C = teclado.nextInt();
+            }
+        }
         
-        System.out.println("El valor del centro es: " + B );
+        System.out.println(A + " / " + B + " / " + C + " El valor del centro es: " + B );
+        
+        System.out.println("\nQuiere volver a ejecutar el Ejercicio 1");
+        System.out.println("Ponga 1 para si y 0 Para volver al menu");
+        opcionaux = teclado.nextInt();
+        if ( opcionaux == 1 ){
+                    
+            Ejercicio1();        
+        }
     }
     
     static void Ejercicio2(){
@@ -123,6 +148,14 @@ public class ejercicio9 {
                 }
             }
         }
+        
+        System.out.println("\nQuiere volver a ejecutar el Ejercicio 2");
+        System.out.println("Ponga 1 para si y 0 Para volver al menu");
+        opcionaux = teclado.nextInt();
+        if ( opcionaux == 1 ){
+            
+            Ejercicio2();
+        }
     }
     
     static void Ejercicio3(){
@@ -133,6 +166,11 @@ public class ejercicio9 {
         
         System.out.println("Cuantos numeros de la secuencia quiere que se generen");
         A = teclado.nextInt();
+        A = A - 2;
+        
+        System.out.println("\n0");
+        System.out.println("-");
+        System.out.println("1");
       
         while (i < A ){
             
@@ -143,7 +181,15 @@ public class ejercicio9 {
             num2 = numeroFibonnacci;
             
             i++;
-        } 
+        }
+        
+        System.out.println("\nQuiere volver a ejecutar el Ejercicio 3");
+        System.out.println("Ponga 1 para si y 0 Para volver al menu");
+        opcionaux = teclado.nextInt();
+        if ( opcionaux == 1 ){
+            
+            Ejercicio3();
+        }
     }
     
     static void Ejercicio4(){
@@ -196,6 +242,14 @@ public class ejercicio9 {
                 System.out.println("Finalizado");
             }
         }
+        
+        System.out.println("\nQuiere volver a ejecutar el Ejercicio 4");
+        System.out.println("Ponga 1 para si y 0 Para volver al menu");
+        opcionaux = teclado.nextInt();
+        if ( opcionaux == 1 ){
+            
+            Ejercicio4();
+        }
     }
     
     static void Ejercicio5(){
@@ -227,7 +281,15 @@ public class ejercicio9 {
                 
                 System.out.println("Finalizado");
             }
-        } 
+        }
+        
+        System.out.println("\nQuiere volver a ejecutar el Ejercicio 5");
+        System.out.println("Ponga 1 para si y 0 Para volver al menu");
+        opcionaux = teclado.nextInt();
+        if ( opcionaux == 1 ){
+            
+            Ejercicio5();
+        }
     }
     
     static void Ejercicio6(){
@@ -272,6 +334,14 @@ public class ejercicio9 {
         System.out.println("El total de la suma de los pares es: " + tSumPares + " y El total de la suma de los impares es: " + tSumImpares);
         
         System.out.println("El resultado de la media de los pares es: " + mediaPar + " y El resultado de la media de los impares es: " + mediaImpar);
+        
+        System.out.println("\nQuiere volver a ejecutar el Ejercicio 6");
+        System.out.println("Ponga 1 para si y 0 Para volver al menu");
+        opcionaux = teclado.nextInt();
+        if ( opcionaux == 1 ){
+            
+            Ejercicio6();
+        }
     }
     
     static void Ejercicio7(){
@@ -295,6 +365,14 @@ public class ejercicio9 {
         }
         
         System.out.println("Resultado: " + Suma);
+        
+        System.out.println("\nQuiere volver a ejecutar el Ejercicio 7");
+        System.out.println("Ponga 1 para si y 0 Para no");
+        opcionaux = teclado.nextInt();
+        if ( opcionaux == 1 ){
+            
+            Ejercicio7();
+        }
     }
     
     static void Ejercicio8(){
@@ -317,5 +395,13 @@ public class ejercicio9 {
         }
         
         System.out.println("Resultado de la suma de los datos negativos es: " + suma);
+        
+        System.out.println("\nQuiere volver a ejecutar el Ejercicio 8");
+        System.out.println("Ponga 1 para si y 0 Para volver al menu");
+        opcionaux = teclado.nextInt();
+        if ( opcionaux == 1 ){
+            
+            Ejercicio8();
+        }
     }
 }
